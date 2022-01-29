@@ -110,16 +110,17 @@ const questions = inquirer.prompt(
     * Github :${github}
     * Email :${email}`;
 
+// TODO: Create a function to initialize app
 //Call the function to create our readme using fs
-writeToFile(title, template);
+writeToFile(template);
 }
 );
 
 // TODO: Create a function to write README file
 //creating our writeToFile function
-function writeToFile(fileName, template) {
+function writeToFile(template) {
 //fs
-fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,template,(err)=>{
+fs.writeFile('README.md',template,(err)=>{
     if(err){
         console.log(err)
     }
@@ -130,8 +131,7 @@ fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,template,(err)
 
 
 
-// // TODO: Create a function to initialize app
-// function init() {}
+
 
 // // Function call to initialize app
 // init();

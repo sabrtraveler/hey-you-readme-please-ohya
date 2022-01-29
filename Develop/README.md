@@ -1,23 +1,23 @@
-# fox
-    
+# shiro
+
     * [Description] (#description)
     * [Installation](#installation)
     * [Usage](#usage)
     * [Contribution](#contribution)
     * [License](#license)
     # Description
-    cool
+    cool stuff
     ## Installation
-    turnign it on
+    install it
     ## Usage
-    by using it
+    use it
     ## Contribution
     no
     ## Testing
-    just test it
+    test it
     ## License
     The MIT license
 
     # Contact
-    * Githb :sabr
+    * Github :sabr
     * Email :sabr@sabr.com
