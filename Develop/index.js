@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 //installed inquirer package
-//file system is core module - no need to install
+//fs is core module - no need to install
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -85,7 +85,7 @@ const questions = inquirer.prompt(
  github,
  email
 })=>{
-    //template to be used
+//Table of Contents template to be used
     const template = `# ${title}
     
     * [Description] (#description)
@@ -109,12 +109,24 @@ const questions = inquirer.prompt(
     # Contact
     * Githb :${github}
     * Email :${email}`;
-    //Function to create our readme using fs
-    // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
+//Call the function to create our readme using fs
+writeToFile(title, template);
 }
-)
+);
+
+// TODO: Create a function to write README file
+//creating our writeToFile function
+function writeToFile(fileName, template) {
+//fs
+fs.writeFile(`./${fileName.toLowerCase().split(' '.join(''))}.md`,data,()=>{
+    if(err){
+        console.log(err)
+    }
+    console.log('Your README has been generated!');
+})
+}
+
 
 
 
