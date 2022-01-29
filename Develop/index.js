@@ -101,44 +101,22 @@ const questions = inquirer.prompt(
     ${usage}
     ## Contribution
     ${contribution}
-    
-    
-    `
+    ## Testing
+    ${testing}
+    ## License
+    ${license}
+
+    # Contact
+    * Githb :${github}
+    * Email :${email}`;
+    //Function to create our readme using fs
+    // TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
 
 }
 )
 
 
-// TODO: Create an array of questions for user input
-const questions = [
-    {   
-        message: "Please provide a table on content",
-        name: "table of content"
-    },
-    {   
-        message: "What is the name of the user?",
-        name: "userName"
-    },
-    {   
-        message: "What licenses are required with this project?",
-        name: "licenses"
-    },
-    {   
-        message: "What is the test process for this project?",
-        name: "test"
-    },
-    {   
-        message: "What is the user github email address?",
-        name: "GitHub user email"
-    },
-    {   
-        message: "Please provide a profile picture",
-        name: "GitHub profile picture"
-    }
-];
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
