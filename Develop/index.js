@@ -11,42 +11,42 @@ const questions = inquirer.prompt(
     {
         type: 'input',
         name: 'title',
-        message='What is the name of the project?',
+        message:'What is the name of the project?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'description',
-        message='What is the description of the project?',
+        message:'What is the description of the project?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'installation',
-        message='How do you install your app?',
+        message:'How do you install your app?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'usage',
-        message='How do you use your app?',
+        message:'How do you use your app?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'contribution',
-        message='Any contributing guidelines to this project?',
+        message:'Any contributing guidelines to this project?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'testing',
-        message='Can you explain your testing procedures for this project?',
+        message:'Can you explain your testing procedures for this project?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
@@ -54,7 +54,7 @@ const questions = inquirer.prompt(
     {
         type: 'list',
         name: 'license',
-        message='What license is this project covered under?',
+        message:'What license is this project covered under?',
         choices:['The MIT license', 'The GPL License', 'Apache License', 'GNU license', 'N/A'],
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
@@ -62,14 +62,14 @@ const questions = inquirer.prompt(
     {
         type: 'input',
         name: 'github',
-        message='What is your Github username?',
+        message:'What is your Github username?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },
     {
         type: 'input',
         name: 'email',
-        message='What is my email address',
+        message:'What is my email address',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
     },  
@@ -107,7 +107,7 @@ const questions = inquirer.prompt(
     ${license}
 
     # Contact
-    * Githb :${github}
+    * Github :${github}
     * Email :${email}`;
 
 //Call the function to create our readme using fs
@@ -119,7 +119,7 @@ writeToFile(title, template);
 //creating our writeToFile function
 function writeToFile(fileName, template) {
 //fs
-fs.writeFile(`./${fileName.toLowerCase().split(' '.join(''))}.md`,data,()=>{
+fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,template,(err)=>{
     if(err){
         console.log(err)
     }
@@ -130,16 +130,10 @@ fs.writeFile(`./${fileName.toLowerCase().split(' '.join(''))}.md`,data,()=>{
 
 
 
-// TODO: Create a function to initialize app
-function init() {}
+// // TODO: Create a function to initialize app
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
 
 
-fs.writeFile('Readme.md', writeToFile(), err =>{
-    if (err) throw err;
-
-    console.log('Readme complete! Check out Readme.md to see the output!');
-
-});
