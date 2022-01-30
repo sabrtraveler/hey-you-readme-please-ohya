@@ -1,0 +1,19 @@
+{
+  "name": "hey-you-readme-please-ohya",
+  "version": "1.0.0",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrtraveler/hey-you-readme-please-ohya.git"
+  },
+  "author": "sabrtraveler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabrtraveler/hey-you-readme-please-ohya/issues"
+  },
+  "homepage": "https://github.com/sabrtraveler/hey-you-readme-please-ohya#readme"
+}
