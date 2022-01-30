@@ -138,8 +138,8 @@ inquirer.prompt([
     ${data.license}
 
     ### Questions?
-    * Check out my [Github]https://github.com/${data.github}.
-    * Reach me by [Email](${data.email}).`
+    * Check out my [Github](https://github.com/${data.github}).
+    * Reach me by email at ${data.email}.`
 }
 
 questions()

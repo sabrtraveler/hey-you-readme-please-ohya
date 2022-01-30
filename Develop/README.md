@@ -1,4 +1,4 @@
-# test
+# shirosusosos
 
     ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -30,5 +30,5 @@
     MIT License
 
     ### Questions?
-    * Check out my [Github]https://github.com/test.
-    * Reach me by [Email](test).
+    * Check out my [Github](https://github.com/test).
+    * Reach me by email at test.
