@@ -1,6 +1,6 @@
 # test
 
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    ![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=plastic)
     ## Table of Contents:
     * [Description](#description)
     * [Installation](#installation)
@@ -9,7 +9,7 @@
     * [Testing])(#testing)
     * [License](#license)
     * [Questions](#questions)
-    
+
     ### Description
     test
 
@@ -30,4 +30,4 @@
 
     ### Questions?
     * Github: https://github.com/test
-    * Email: tes
+    * Email: test
