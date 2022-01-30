@@ -1,6 +1,7 @@
-# test
+# shirosu
 
-    ![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=plastic)
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    
     ## Table of Contents:
     * [Description](#description)
     * [Installation](#installation)
@@ -9,7 +10,7 @@
     * [Testing])(#testing)
     * [License](#license)
     * [Questions](#questions)
-
+    
     ### Description
     test
 
