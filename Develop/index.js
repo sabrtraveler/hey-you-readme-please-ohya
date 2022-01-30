@@ -55,9 +55,9 @@ const questions = inquirer.prompt(
         type: 'list',
         name: 'license',
         message:'What license is this project covered under?',
-        choices:['The MIT license', 'The GPL License', 'Apache License', 'GNU license', 'N/A'],
+        choices:['MIT License', 'GPL License', 'Apache License', 'BSD License', 'N/A'],
         //validate property to check that the user provided a value
-        validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
+        validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}}
     },
     {
         type: 'input',
@@ -83,32 +83,60 @@ const questions = inquirer.prompt(
  testing,
  license,
  github,
- email
+ email,
+ badge
 })=>{
+
+    //function to generate license badges
+
+function generateBadge(data){
+ 
+    let badge = "";
+    if(data.license == "MIT License"){
+        badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    }else if (data.license == "Apache License"){
+        badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    }else if (data.license == "GPL License"){
+        badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    }else if (data.license == "BSD License"){
+        badge = "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    } 
+    }
+
 //Table of Contents template to be used
     const template = `# ${title}
-    
-    * [Description] (#description)
+
+    ${badge}
+    ## Table of Contents:
+    * [Description](#description)
     * [Installation](#installation)
     * [Usage](#usage)
     * [Contribution](#contribution)
+    * [Testing])(#testing)
     * [License](#license)
-    # Description
+    * [Questions](#questions)
+    
+    ### Description
     ${description}
-    ## Installation
+
+    ### Installation
     ${installation}
-    ## Usage
+
+    ### Usage
     ${usage}
-    ## Contribution
+
+    ### Contribution
     ${contribution}
-    ## Testing
+
+    ### Testing
     ${testing}
-    ## License
+
+    ### License
     ${license}
 
-    # Contact
-    * Github :${github}
-    * Email :${email}`;
+    ### Questions?
+    * Github: https://github.com/${github}
+    * Email: ${email}`;
 
 // TODO: Create a function to initialize app
 //Call the function to create our readme using fs
@@ -133,7 +161,5 @@ fs.writeFile('README.md',template,(err)=>{
 
 
 
-// // Function call to initialize app
-// init();
 
 
