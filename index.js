@@ -106,40 +106,40 @@ inquirer.prompt([
         }       
 
 //Table of Contents template to be used
-   return`# ${data.title}
+return`# ${data.title}
 
-    ${badge}
+${badge}
 
-    ## Table of Contents:
-    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Contribution](#contribution)
-    * [Testing](#testing)
-    * [License](#license)
-    * [Questions](#questions)
+## Table of Contents:
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Testing](#testing)
+* [License](#license)
+* [Questions](#questions)
     
-    ### Description
-    ${data.description}
+### Description
+${data.description}
 
-    ### Installation
-    ${data.installation}
+### Installation
+${data.installation}
 
-    ### Usage
-    ${data.usage}
+### Usage
+${data.usage}
 
-    ### Contribution
-    ${data.contribution}
+### Contribution
+${data.contribution}
 
-    ### Testing
-    ${data.testing}
+### Testing
+${data.testing}
 
-    ### License
-    ${data.license}
+### License
+${data.license}
 
-    ### Questions?
-    * Check out my [Github](https://github.com/${data.github}).
-    * Reach me by email at ${data.email}.`
+### Questions?
+* Check out my [Github](https://github.com/${data.github}).
+* Reach me by email at ${data.email}.`
 }
 
 questions()
