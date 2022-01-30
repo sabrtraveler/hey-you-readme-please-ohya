@@ -1,13 +1,13 @@
-# shirosu
+# test
 
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-    
+    ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
     ## Table of Contents:
     * [Description](#description)
     * [Installation](#installation)
     * [Usage](#usage)
     * [Contribution](#contribution)
-    * [Testing])(#testing)
+    * [Testing](#testing)
     * [License](#license)
     * [Questions](#questions)
     
@@ -30,5 +30,5 @@
     MIT License
 
     ### Questions?
-    * Github: https://github.com/test
-    * Email: test
+    * Check out my [Github]https://github.com/test.
+    * Reach me by [Email](test).
