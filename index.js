@@ -109,6 +109,10 @@ ${badge}
 ### Description
 ${data.description}
 
+*Video tutorial: 
+The following video shows the web application's appearance and functionality:
+https://watch.screencastify.com/v/NU2SrIB0NmqnFiP9siF5
+
 ### Installation
 ${data.installation}
 

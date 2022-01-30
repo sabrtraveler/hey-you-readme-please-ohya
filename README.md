@@ -14,6 +14,10 @@
 ### Description
 You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
 
+*Video tutorial: 
+The following video shows the web application's appearance and functionality:
+https://watch.screencastify.com/v/NU2SrIB0NmqnFiP9siF5
+
 ### Installation
 Clone the repo files from this github and when you are in the root directory type: node index.js to activate.
 
