@@ -4,9 +4,8 @@
 //util is core module - no need to install
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+const fsPromises = require('fs/promises');
 
-const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 //inquirer to prompt questions
@@ -42,7 +41,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'contribution',
+        name: 'contributing',
         message:'Any contributing guidelines to this project?',
         //validate property to check that the user provided a value
         validate: (value)=>{ if (value){return true} else {return 'I need a value to continue'}},
@@ -79,19 +78,7 @@ inquirer.prompt([
     },  
 ]);
 
-// .then(({
-//  title,
-//  description,
-//  installation,
-//  usage,
-//  contribution,
-//  testing,
-//  license,
-//  github,
-//  email,
-//  badge
-// })=>{
-
+// Dealing with the license badges that auto generate based on user selection
     function template(data){
      
         let badge = "";
@@ -114,7 +101,7 @@ ${badge}
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contribution](#contribution)
+* [Contributing](#contributing)
 * [Testing](#testing)
 * [License](#license)
 * [Questions](#questions)
@@ -128,8 +115,8 @@ ${data.installation}
 ### Usage
 ${data.usage}
 
-### Contribution
-${data.contribution}
+### Contributing
+${data.contributing}
 
 ### Testing
 ${data.testing}
@@ -143,27 +130,10 @@ ${data.license}
 }
 
 questions()
-.then((data) => writeFileAsync('README.md', template(data)))
+.then((data) => fsPromises.writeFile('README.md', template(data)))
 .then(() => console.log('Your README has been generated!'))
 .catch((err) => console.error(err));
 
-// // TODO: Create a function to initialize app
-// //Call the function to create our readme using fs
-// writeToFile(template);
-// }
-// );
-
-// // TODO: Create a function to write README file
-// //creating our writeToFile function
-// function writeToFile(template) {
-// //fs
-// fs.writeFile('README.md',template,(err)=>{
-//     if(err){
-//         console.log(err)
-//     }
-//     console.log('Your README has been generated!');
-// })
-// }
 
 
 
